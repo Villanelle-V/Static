@@ -1,25 +1,21 @@
-//#ifndef MOHICAN_H
-//#define MOHICAN_H
-//
-//#include <iostream>
-//#include <list>
-//
-//class Mohican {
-//public:
-//	static Mohican* last;
-//	Mohican* next;
-//	Mohican* prev;
-//	int id;
-//	static int count;
-//	static std::list<Mohican*> list;
-//public:
-//	Mohican();
-//	~Mohican();
-//	int getId();
-//	//const Mohican& getLast();
-//	static void getLast();
-//};
-//
-////std::ostream& operator<<(std::ostream& out, const Mohican& mohican);
-//
-//#endif // MOHICAN_H
+#ifndef MOHICAN_H
+#define MOHICAN_H
+
+#include <iostream>
+#include <list>
+
+class Mohican {
+private:
+	int id;
+	static std::list<Mohican*> list;
+	static Mohican* last;
+public:
+	static int count;
+public:
+	Mohican();
+	~Mohican();
+	int getId();
+	static Mohican& getLast();
+};
+
+#endif // MOHICAN_H
