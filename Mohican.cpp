@@ -9,7 +9,15 @@ Mohican::Mohican() {
 }
 
 Mohican::~Mohican() {
-	list.pop_back();
+	if ( this == list.back() ) {
+		list.pop_back();
+	}
+
+	if ( list.size() == 0 ) {
+		last = nullptr;
+		return;
+	}
+
 	last = list.back();
 }
 
